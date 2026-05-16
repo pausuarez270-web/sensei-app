@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f5f0e8;
+    color: #0a0a0a;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #c84b2f;
+    color: #f5f0e8;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f0e8;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4cfc6;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink text-paper font-ui font-medium tracking-wide px-6 py-3 
+           transition-all duration-150 active:scale-95 hover:bg-accent;
+  }
+
+  .btn-ghost {
+    @apply border border-border text-ink font-ui font-medium tracking-wide px-6 py-3
+           transition-all duration-150 active:scale-95 hover:border-ink bg-transparent;
+  }
+
+  .btn-danger {
+    @apply bg-accent text-paper font-ui font-medium tracking-wide px-6 py-3
+           transition-all duration-150 active:scale-95 hover:bg-warn;
+  }
+
+  .card {
+    @apply bg-paper border border-border p-6;
+  }
+
+  .label {
+    @apply font-body text-xs tracking-widest uppercase text-dim;
+  }
+
+  .sensei-message {
+    @apply font-body text-sm italic text-dim border-l-2 border-accent pl-3;
+  }
+}
